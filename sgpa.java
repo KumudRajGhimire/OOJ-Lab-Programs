@@ -13,11 +13,11 @@ class StudDetails {
         System.out.print("Enter Name: ");
         name = sc.next();
 
-        System.out.println("Enter marks for 3 subjects (out of 100):");
+        System.out.println("Enter marks and credits for 3 subjects (marks out of 100):");
         for (int i = 0; i < 3; i++) {
             marks[i] = sc.nextInt();
             
-            credits[i] = 4; 
+            credits[i] = sc.nextInt(); 
         }
     }
 
@@ -48,7 +48,7 @@ class StudDetails {
         System.out.println("USN: " + usn);
         System.out.println("Name: " + name);
         for (int i = 0; i < 3; i++) {
-            System.out.println("Marks of subject " + (i + 1) + ": " + marks[i]);
+            System.out.println("Marks of subject " + (i + 1) + "with credit "+credits[i]+ "is " + marks[i]);
         }
         System.out.printf("SGPA: %.2f\n", computeSGPA());
     }
